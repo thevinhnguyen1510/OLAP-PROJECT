@@ -1,0 +1,4 @@
+SELECT 
+NON EMPTY {[Measures].[FACT Count]} ON COLUMNS,
+{TOPCOUNT([Dim Location].[State].[State],5,[Measures].[FACT Count])} ON ROWS
+FROM [Accidents DW]

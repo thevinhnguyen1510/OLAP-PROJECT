@@ -1,0 +1,4 @@
+SELECT NON EMPTY {[Dim Date].[Start Time Month].Members} ON COLUMNS,
+   	NON EMPTY GENERATE([Dim Date].[Start Time Year].Members,{[Dim Date].[Start Time Year].CurrentMember}) ON ROWS
+FROM [Accidents DW]
+WHERE ([Measures].[Average Severity])

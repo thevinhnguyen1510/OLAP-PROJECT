@@ -1,0 +1,4 @@
+SELECT [Measures].[Fact Count] ON COLUMNS,
+NON EMPTY {EXCEPT([Dim Location].[State].CHILDREN,
+{[Dim Location].[State].&[NY],[Dim Location].[State].&[NV]}) * [Dim Date].[Start Time Year].[Start Time Year]} ON ROWS
+FROM [Accidents DW]

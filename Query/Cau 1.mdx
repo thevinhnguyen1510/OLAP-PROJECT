@@ -1,0 +1,4 @@
+SELECT 
+    NON EMPTY [Measures].[FACT Count]  on COLUMNS,
+	NON EMPTY [Dim Date].[Start Time Year].[Start Time Year]. MEMBERS * [Dim Location].[STATE]. MEMBERS  on ROWS
+FROM [Accidents DW] 

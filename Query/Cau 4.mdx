@@ -1,0 +1,6 @@
+SELECT
+  {[Dim Date].[Start Time Year].Members} ON COLUMNS,
+  {[Measures].[Average Severity]} ON ROWS
+FROM [Accidents DW]
+WHERE
+  ([Dim Location].[County].[New York], [Dim Weather].[Weather Condition].[Cloudy])

@@ -1,0 +1,4 @@
+SELECT {[Measures].[Fact Count] * [Dim Location].[State]. MEMBERS} ON COLUMNS,
+     	GENERATE([Dim Location].[State],
+        	TOPCOUNT([Dim Date].[Start Time Month].Members, 4, [Measures].[Fact Count])) ON ROWS
+FROM [Accidents DW]

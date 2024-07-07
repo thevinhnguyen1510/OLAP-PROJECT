@@ -1,0 +1,4 @@
+SELECT [Measures].[Fact Count] ON COLUMNS,
+NON EMPTY {[Dim Location].[County].[County]. MEMBERS}
+HAVING [Measures].[Fact Count] >= 3000 ON ROWS
+FROM [Accidents DW]

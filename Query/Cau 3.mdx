@@ -1,0 +1,3 @@
+SELECT {[Measures].[Fact Count]} ON COLUMNS,
+    [Dim Weather].[Weather Condition]. MEMBERS HAVING [Measures].[FACT Count] <= 1000 ON ROWS
+FROM [Accidents DW]

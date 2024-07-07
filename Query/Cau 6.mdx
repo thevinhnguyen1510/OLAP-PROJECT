@@ -1,0 +1,4 @@
+SELECT NON EMPTY {[Dim Date].[Start Time Year].Members * [Dim Date].[Start Time Month].Members} ON ROWS,
+    	{[Measures].[FACT Count], [Measures].[Sum Distancemi]} ON COLUMNS
+FROM [Accidents DW]
+WHERE ([Dim Weather].[Weather Condition].[Fair])

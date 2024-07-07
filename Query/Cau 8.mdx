@@ -1,0 +1,3 @@
+SELECT DRILLDOWNLEVEL([Dim Date].[Hierarchy_Date].[Start Time YEAR]) ON ROWS,
+    NON EMPTY [Measures].[Fact Count] ON COLUMNS
+FROM [Accidents DW]
